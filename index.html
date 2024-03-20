@@ -13,7 +13,7 @@
   </head>
   <body>
     <div
-      class="container border border-primary bg-light w-100 p-5 text-center mt-5 rounded shadow-lg"
+      class="container border border-primary bg-light w-50 p-5 mt-5 text-center rounded shadow-lg"
     >
       <h1><i>Prime Or Not</i></h1>
       <input
@@ -22,16 +22,14 @@
         class="form-control mt-4 text-center"
         placeholder="Enter a Number"
       />
-      <button onclick="primeCheck()" class="btn btn-primary mt-4 w-25">
-        Check
-      </button>
+      <button onclick="primeCheck()" class="btn btn-primary mt-4">Check</button>
     </div>
   </body>
   <script>
     function primeCheck() {
       var num = Number(input.value);
       if (num == 1) {
-        alert("Its Not a Prime Number");
+        alert(`${num} is not a Prime Number`);
       } else if (num > 1) {
         for (i = 2; i < num; i++) {
           if (num % i == 0) {
@@ -39,9 +37,9 @@
           }
         }
         if (num == i) {
-          alert("Its a Prime Number");
+          alert(`${num} is a Prime Number`);
         } else {
-          alert("Its Not a Prime Number");
+          alert(`${num} is not a Prime Number`);
         }
       } else {
         alert("Excluded Number");
